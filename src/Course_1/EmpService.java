@@ -28,9 +28,8 @@ public class EmpService {
     }
     public float totalAmount() {                                // Метод общей суммы зарплаты
         int sum = 0;
-        for (int i = 0; i < employees.length; i++) {
-            employees[i].equals(employees[i].getSalary());
-            sum += employees[i].getSalary();
+        for (int i = 0; i < size; i++) {
+          sum += employees[i].getSalary();
         }
         return sum;
     }
@@ -38,9 +37,7 @@ public class EmpService {
     public String maxSalary(){                              // Поиск сотрудника с высоким заработком
         float max = 0;
         String employeeMaxSalary = "";
-        for (int i = 0; i < employees.length; i++) {
-            employees[i].equals(employees[i].getSalary());
-            employees[i].equals(employees[i].getFullName());
+        for (int i = 0; i < size; i++) {
                 if(employees[i].getSalary()>max){
                     max=employees[i].getSalary();
                     employeeMaxSalary=employees[i].getFullName();
@@ -52,9 +49,7 @@ public class EmpService {
     public String minSalary(){                                        // Поиск сотрудника с низким заработком
         float min = employees[0].getSalary();
         String employeeMaxSalary = "";
-        for (int i = 0; i < employees.length; i++) {
-            employees[i].equals(employees[i].getSalary());
-            employees[i].equals(employees[i].getFullName());
+        for (int i = 0; i < size; i++) {
             if(employees[i].getSalary()<min){
                 min=employees[i].getSalary();
                 employeeMaxSalary=employees[i].getFullName();
@@ -65,24 +60,12 @@ public class EmpService {
     }
     public void printOnlyEmployees() {                                   // Вывод только ФИО сотрудников
         for (int i = 0; i < size; i++) {
-            Employee employee = employees[i];
-            System.out.println(employee.getFullName());
+            System.out.println(employees[i].getFullName());
 
         }
     }
     public float averageAmount(){                                   // Метод средней суммы зп
-        int day = 21;
-        float sum = 0;
-        float averageAmount = 0;
-        String employeeMaxSalary = "";
-        for (int i = 0; i < employees.length; i++) {
-            employees[i].equals(employees[i].getSalary());
-                sum+=employees[i].getSalary();
-            averageAmount = sum/day;
-
-
-        }
-        return averageAmount;
+        return totalAmount()/size;
     }
 
     public void printAllEmployees(){                                  // Вывод всех параметров массива ID ФИО Отдел зарплата

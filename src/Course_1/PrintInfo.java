@@ -18,21 +18,7 @@ public class PrintInfo {
         Employee employee5 = new Employee();
         employee5.setDepartment(4);
         employee5.setSalary(12399);
-        Employee employee6 = new Employee();
-        employee6.setDepartment(1);
-        employee6.setSalary(34999);
-        Employee employee7 = new Employee();
-        employee7.setDepartment(2);
-        employee7.setSalary(68599);
-        Employee employee8 = new Employee();
-        employee8.setDepartment(3);
-        employee8.setSalary(84988);
-        Employee employee9 = new Employee();
-        employee9.setDepartment(4);
-        employee9.setSalary(23999);
-        Employee employee10 = new Employee();
-        employee10.setDepartment(5);
-        employee10.setSalary(95499);
+
 
 
         EmpService employees = new EmpService();
@@ -41,11 +27,11 @@ public class PrintInfo {
         employees.addEmployee("Кабанов Елисей Донатович",employee3.getDepartment(),employee3.getSalary());
         employees.addEmployee("Давыдов Адам Альвианович",employee4.getDepartment(),employee4.getSalary());
         employees.addEmployee("Шарипов Роберт Степанович",employee5.getDepartment(),employee5.getSalary());
-        employees.addEmployee("Беляков Артем Юлианович",employee6.getDepartment(),employee6.getSalary());
-        employees.addEmployee("Голубев Кирилл Гордеевич",employee7.getDepartment(),employee7.getSalary());
-        employees.addEmployee("Белов Архип Филиппович",employee8.getDepartment(),employee8.getSalary());
-        employees.addEmployee("Горбунов Клим Христосович",employee9.getDepartment(),employee9.getSalary());
-        employees.addEmployee("Филатов Осип Эльдарович",employee10.getDepartment(),employee10.getSalary());
+        employees.addEmployee("Беляков Артем Юлианович",1,35060);
+        employees.addEmployee("Голубев Кирилл Гордеевич",2,15615);
+        employees.addEmployee("Белов Архип Филиппович",3,65488);
+        employees.addEmployee("Горбунов Клим Христосович",4,70568);
+        employees.addEmployee("Филатов Осип Эльдарович",5,78745);
 
 
         employees.printAllEmployees();
