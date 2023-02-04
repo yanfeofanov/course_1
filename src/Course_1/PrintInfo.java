@@ -22,16 +22,16 @@ public class PrintInfo {
 
 
         EmpService employees = new EmpService();
-        employees.addEmployee("Феофанов Ян Олегович", employee1.getDepartment(), employee1.getSalary());
+        employees.addEmployee("Феофанов Ян Олегович        ", employee1.getDepartment(), employee1.getSalary());
         employees.addEmployee("Самаров Алексей Вячеславович",employee2.getDepartment(),employee2.getSalary());
-        employees.addEmployee("Кабанов Елисей Донатович",employee3.getDepartment(),employee3.getSalary());
-        employees.addEmployee("Давыдов Адам Альвианович",employee4.getDepartment(),employee4.getSalary());
-        employees.addEmployee("Шарипов Роберт Степанович",employee5.getDepartment(),employee5.getSalary());
-        employees.addEmployee("Беляков Артем Юлианович",1,35060);
-        employees.addEmployee("Голубев Кирилл Гордеевич",2,15615);
-        employees.addEmployee("Белов Архип Филиппович",3,65488);
-        employees.addEmployee("Горбунов Клим Христосович",4,70568);
-        employees.addEmployee("Филатов Осип Эльдарович",5,78745);
+        employees.addEmployee("Кабанов Елисей Донатович    ",employee3.getDepartment(),employee3.getSalary());
+        employees.addEmployee("Давыдов Адам Альвианович    ",employee4.getDepartment(),employee4.getSalary());
+        employees.addEmployee("Шарипов Роберт Степанович   ",employee5.getDepartment(),employee5.getSalary());
+        employees.addEmployee("Беляков Артем Юлианович     ",1,35060);
+        employees.addEmployee("Голубев Кирилл Гордеевич    ",2,15615);
+        employees.addEmployee("Белов Архип Филиппович      ",3,65488);
+        employees.addEmployee("Горбунов Клим Христосович   ",4,70568);
+        employees.addEmployee("Филатов Осип Эльдарович     ",5,78745);
 
 
         employees.printAllEmployees();
