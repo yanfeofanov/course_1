@@ -1,5 +1,7 @@
 package Course_1;
 
+import java.util.Objects;
+
 public class Employee {
     private String fullName;
 
@@ -53,9 +55,23 @@ public class Employee {
             this.salary = salary;
         }
     }
-@Override
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return  Objects.equals(fullName, employee.fullName);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(fullName);
+    }
+
+    @Override
  public String toString(){
-        return  "ID : "+getId()+" ФИО : "+getFullName()+"     Отдел :  "+getDepartment()+"    Зарплата : "+getSalary()+" рублей";
+        return  "ID : "+getId()+" ФИО : "+getFullName()+" Отдел : " + " "+getDepartment()+" Зарплата : "+getSalary()+" рублей";
  }
 
 }
